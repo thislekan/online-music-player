@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
+    <title>Sparkplug Music Player</title>
+
+    <!-- Bootstrap-->
+    <link href="file.css" rel="stylesheet" media="screen">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Harmattan" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="box" class="box">
+      <p id="status-prompt"></p>
+      <p id="track-info"></p>
+      <p id="track-progress">0:00</p>
+      <p id="track-duration">0:00</p>
+      <div id="progress-bar">
+        <div id="color-progress"></div>
+      </div>
+      <div class="track-listing" id="track-listing">
+        <p>Songs</p>
+        <ol>
+          <li><a href="#" id="track1">Short skirt ft Tekno - Mr. Eazi</a></li>
+          <li><a href="#" id="track2">Life is easy ft Olamide, Phyno - Mr. Eazi</a></li>
+          <li><a href="#" id="track3">Pass the agbara - Skuki</a></li>
+          <li><a href="#" id="track4">If prod by Tekno - Davido</a></li>
+          <li><a href="#" id="track5">Mad over you - Runtown</a></li>
+          <li><a href="#" id="track6">Iskaba ft Dj Tunez - Wande Coal</a></li>
+          <li><a href="#" id="track7">Daddy yo - Wizkid</a></li>
+          <li><a href="#" id="track8">Rabba ft Kiss Daniel, Sugarboy - Dj Shabsy</a></li>
+          <li><a href="#" id="track9">Diana - Tekno</a></li>
+          <li><a href="#" id="track10">Pepper dem ft Davolee - Olamide</a></li>
+        </ol>
+      </div>
+      <div class="topmost-layer" id="topmost-layer">
+        <div class="button-group">
+          <button type="button" name="button" id="list-toggler" title="playlist"><i class="fa fa-reorder"></i></button>
+          <button type="button" name="button" id="shuffle" title="shuffle"><i class="fa fa-random"></i></button>
+          <button type="button" name="button" id="prev" title="previous"><i class="fa fa-fast-backward"></i></button>
+          <button type="button" name="button" id="play" title="play"><i class="fa fa-play"></i></button>
+          <button type="button" name="button" id="pause" title="pause"><i class="fa fa-pause"></i></button>
+          <button type="button" name="button" id="next" title="next"><i class="fa fa-fast-forward"></i></button>
+          <button type="button" name="button" id="repeat" title="repeat"><i class="fa fa-repeat"></i></button>
+          <button type="button" name="button" id="volume-popup" title="volume"><i class="fa fa-volume-up"></i></button>
+            <!-- Progress bars. To visually represent track progress as well as to control volume -->
+          <button type="button" id="for-seeking"><i id="progress-button"></i></button>
+          <p id="vc"><b>Volume control</b></p>
+          <button type="button" id="volume-control"><i id="volume-progress"></i></button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/playlist.js"></script>
+    <script src="js/howler.core.min.js"></script>
+    <script src="js/file.js" charset="utf-8"></script>
+  </body>
+</html>

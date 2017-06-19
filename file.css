@@ -1,0 +1,350 @@
+html{font-size: 10px}
+body{
+  background-color: #311045;
+  font-family: harmattan, verdana, arial, sans-serif;
+}
+.box{
+  height: 30vh;
+  width: 90vw;
+  margin-top: 35vh;
+  margin-bottom: 35vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  border: 1px solid black;
+  box-shadow: 2px 4px 6px black;
+  position: relative;
+  overflow: hidden;
+  background-image: url(paris.jpg);
+  background-size: cover;
+}
+#progress-bar{
+  height: 1rem;
+  width: 100%;
+  border: 0px solid #311045;
+  background-color: transparent;
+  position: absolute;
+  top: 75%;
+  left: 0;
+}
+#color-progress{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: yellow;
+}
+.topmost-layer{
+  height: 30vh;
+  width: 90vw;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translate(46rem, -10rem) rotate(180deg);
+  transition: all 0.2s 0.4s ease-in-out;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.track-listing{
+  height: 30vh;
+  width: 90vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translate(-55rem, 10rem) rotate(300deg);
+  text-align: center;
+  display: none;
+  filter: alpha(opacity=100);
+  overflow: scroll;
+}
+.track-listing a, li{
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+.track-listing li:hover{
+  transform: scale(1.2);
+}
+#status-prompt{
+  font-size: 2rem;
+  font-weight: 200;
+  text-shadow: 0px 0px 5px #311045;
+  color: white;
+  text-align: center;
+}
+#track-info{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  text-shadow: 0px 0px 5px #311045;
+  color: white;
+}
+#track-progress{
+  font-size: 2rem;
+  font-weight: 200;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: white;
+  text-shadow: 0px 0px 5px white;
+}
+#track-duration{
+  font-size: 2rem;
+  font-weight: 200;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: white;
+  text-shadow: 0px 0px 5px white;
+}
+.button-group{
+  position: relative;
+  padding-top: 55%;
+  padding-left: 8%;
+}
+.button-group button{
+  background-color: white;
+  border: 1px solid #311045;
+  border-radius: 5.5px;
+  color: #311045;
+  transform: translateY(-200px);
+  transition: all 0.2s ease-in-out;
+}
+.button-group button:hover{
+  box-shadow: 0px 0px 10px white;
+}
+.box:hover .topmost-layer{
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transition-delay: 0s;
+  transform: translate(0px, 0px);
+}
+.box:hover button{
+  transform: translateY(0px);
+  transition-delay: 0.3s;
+}
+#for-seeking{
+  position: absolute;
+  top: 70%;
+  left: 0;
+  height: 1.2rem;
+  width: 100%;
+  border: 1px solid #311045;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#progress-button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1rem;
+  background-color: yellow;
+}
+#volume-control{
+  position: absolute;
+  top: 20%;
+  left: 0;
+  height: 1.2rem;
+  width: 100%;
+  border: 1px solid #311045;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#volume-progress{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1rem;
+  width: 100%;
+  background-color: yellow;
+  opacity: 0;
+}
+#vc{
+  position: absolute;
+  top: 20%;
+  left: 0;
+  margin-left: 40%;
+  margin-right: 40%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  margin-top: -1.5rem;
+  opacity: 0;
+}
+@media only screen and (max-device-width: 324px) {
+  .box:hover button{transform: translateY(-40px)}
+}
+@media only screen and (min-device-width: 325px) and (max-device-width: 375px) {
+  .box:hover button{transform: translateY(-60px)}
+  .button-group{
+    padding-left: 14%;
+    padding-top: 63%;
+  }
+    #volume-control{
+      top: 30%;
+    }
+}
+@media only screen and (min-device-width: 380px) and (max-device-width: 429px) {
+  .box{
+    height: 30vh;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 35vh;
+    margin-bottom: 35vh;
+  }
+  .track-listing{
+    height: 30vh;
+    width: 60vw;
+  }
+  .topmost-layer{
+    height: 30vh;
+    width: 60vw;
+  }
+  .box img{
+    height: 30vh;
+    width: 60vw;
+  }
+  .button-group{
+    padding-left: 5%;
+  }
+}
+@media only screen and (min-device-width:430px) and (max-device-width: 799px) {
+  .box{
+    height: 40vh;
+    width: 40vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+  }
+  #track-info{font-size: 2.5rem}
+  .topmost-layer{
+    height: 40vh;
+    width: 40vw;
+  }
+  .track-listing{
+    height: 40vh;
+    width: 40vw;
+    transform: translate(-55rem, 10rem) rotate(300deg);
+  }
+  .box img{
+    height: 40vh;
+    width: 40vw;
+  }
+  .button-group{
+    padding-left: 12%
+  }
+}
+@media only screen and (min-device-width: 1366px) {
+  .box{
+    height: 40vh;
+    width: 40vw;
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+  }
+  #status-prompt{font-size: 2.5rem}
+  #track-info{font-size: 3.5rem}
+  .topmost-layer{
+    height: 40vh;
+    width: 40vw;
+  }
+  .track-listing{
+    width: 40vw;
+    height: 40vh;
+    transform: translate(-55rem, 10rem) rotate(300deg);
+  }
+  .box img{
+    height: 40vh;
+    width: 40vw;
+  }
+  .button-group{
+    position: relative;
+    padding-top: 40%;
+    padding-left: 30%;
+  }
+  .button-group button{
+    transform: translateY(-200px);
+    transition: all 0.2s ease-in-out;
+  }
+  .button-group:hover button{
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+  }
+}
+@media only screen and (max-device-width: 1365px) and (min-device-width: 1025px) {
+  .box{
+    height: 40vh;
+    width: 40vw;
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+  }
+  #status-prompt{font-size: 2rem}
+  #track-info{font-size: 3rem}
+  .topmost-layer{
+    height: 40vh;
+    width: 40vw;
+  }
+  .track-listing{
+    height: 40vh;
+    width: 40vw;
+    transform: translate(-55rem, 10rem) rotate(300deg);
+  }
+  .box img{
+    height: 40vh;
+    width: 40vw;
+  }
+  .button-group{
+    padding-left: 20%;
+  }
+  .button-group button{
+    transform: translateY(-200px);
+    transition: all 0.2s ease-in-out;
+  }
+  .button-group:hover button{
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+  }
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 800px) {
+  .box{
+    height: 40vh;
+    width: 40vw;
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+  }
+  #status-prompt{font-size: 2rem}
+  #track-info{font-size: 3rem}
+  .topmost-layer{
+    height: 40vh;
+    width: 40vw;
+  }
+  .track-listing{
+    height: 40vh;
+    width: 40vw;
+    transform: translate(-55rem, 10rem) rotate(300deg);
+  }
+  .box img{
+    height: 40vh;
+    width: 40vw;
+  }
+  .button-group{
+    padding-left: 20%;
+  }
+  .button-group button{
+    transform: translateY(-200px);
+    transition: all 0.2s ease-in-out;
+  }
+  .button-group:hover button{
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+  }
+}
